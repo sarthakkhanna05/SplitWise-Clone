@@ -70,6 +70,6 @@ const graphqlSchema = buildSchema(`
   }
 
  `)
-
+//comment
 
 export default graphqlSchema
