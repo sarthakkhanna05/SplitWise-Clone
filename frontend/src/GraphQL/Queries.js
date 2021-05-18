@@ -2,24 +2,6 @@ import {
     gql
 } from "@apollo/client"
 
-export const GET_ALL_USERS = gql `
-    query{
-        users {
-         _id
-        first_name
-        last_name
-        email
-        password
-        phone_number
-        time_zone
-        language
-        currency
-        invitations
-        groups
-    }
-  }
-`
-
 export const GET_USERS = gql `
 query user($userId: ID!){
     user(userId:$userId {
@@ -36,6 +18,24 @@ query user($userId: ID!){
         groups
     }
  }
+`
+
+export const GET_ALL_USERS = gql `
+    query{
+        users {
+         _id
+        first_name
+        last_name
+        email
+        password
+        phone_number
+        time_zone
+        language
+        currency
+        invitations
+        groups
+    }
+  }
 `
 
 export const GET_TRANSACTIONS = gql `

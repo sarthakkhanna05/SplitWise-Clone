@@ -1,5 +1,5 @@
 import {
-    gql
+  gql
 } from "@apollo/client"
 
 export const LOGIN_USER = gql `
@@ -11,17 +11,6 @@ export const LOGIN_USER = gql `
     }
   }
 `
-export const ADD_USER = gql `
-    mutation addUser($name:String!, $email: String!, $password: String!){
-        addUser(name: $name, email:$email,password:$password) {
-         _id
-         first_name
-         last_name
-         email
-    }
-  }
-`
-
 export const UPDATE_USER = gql `
     mutation updateUser($_id:String, !$name:String!, $email: String!, $password: String!, $time_zone:String, $language:String, $currency:String, $phone:String){
         updateUser(_id:$_id, name: $name, email:$email, password:$password, time_zone:$time_zone, language:$language, currency:$currency, phone:$phone) {
@@ -39,6 +28,19 @@ export const UPDATE_USER = gql `
     }
   }
 `
+
+export const ADD_USER = gql `
+    mutation addUser($name:String!, $email: String!, $password: String!){
+        addUser(name: $name, email:$email,password:$password) {
+         _id
+         first_name
+         last_name
+         email
+    }
+  }
+`
+
+
 export const GET_INVITATIONS = gql `
     mutation getInvitations($userId:ID!){
         getInvitations(userId:$userId) {
