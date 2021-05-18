@@ -105,6 +105,7 @@ const resolvers = {
                     //     user,
                     //     token
                     // };
+                    //
                     await user.populate("groups").execPopulate();
 
 
