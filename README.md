@@ -1,4 +1,4 @@
-# SplitWise
+# Splitwise
 
 Please run npm install to install the dependencies in both folders.
 
